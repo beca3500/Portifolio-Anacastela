@@ -1,0 +1,69 @@
+import webbrowser
+
+html_content = """
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil Ana Castela</title>
+    <style>
+     body { font-family: Arial; background: #181818; color: #fff; }
+        .container { max-width: 600px; margin: 40px auto; background: #232323; padding: 24px; border-radius: 12px; }
+        .avatar { border-radius: 50%; width: 64px; }
+        .header { display: flex; align-items: center; justify-content: space-between; }
+        .bio { color: #ccc; font-size: 14px; }
+        .handle { color: #aaa; }
+        .btn { background: #fff; color: #232323; border: none; padding: 8px 16px; border-radius: 6px; margin: 4px; cursor: pointer; }
+        .post { background: #222; margin: 16px 0; padding: 12px; border-radius: 8px; }
+        .likes { color: #ff5a5f; }
+        .comment { background: #191919; margin: 8px 0; padding: 8px; border-radius: 6px; }
+        input[type="text"] { padding: 8px; border-radius: 5px; border: none; width: 70%; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="avatar">
+        <div>
+            <div><b>Ana Castela</b> <span class="handle">@anacastela</span></div>
+            <div class="bio">Sou a boiadeira mais estourada do Brasil! 💖</div>
+        </div>
+        <button class="btn">Seguir</button>
+    </div>
+    <hr>
+    <form>
+        <input type="text" placeholder="Deixe um recadinho pra Ana...">
+        <button class="btn" type="button">Enviar</button>
+    </form>
+    <!-- Comentários fictícios -->
+    <div class="comment">Amo suas músicas! 💜</div>
+    <div class="comment">Vem pra minha cidade, Ana!</div>
+    <h3>Feed da Ana</h3>
+    <div class="post">
+        <b>Novo EP lançado!</b><br>
+        Ouça agora nas plataformas digitais!<br>
+        <button class="btn" type="button">❤️ Curtir</button>
+        <span class="likes">1234</span>
+    </div>
+    <div class="post">
+        <b>Show em Goiânia</b><br>
+        Obrigada, Goiânia! Vocês foram incríveis!<br>
+        <button class="btn" type="button">❤️ Curtir</button>
+        <span class="likes">987</span>
+    </div>
+    <div class="post">
+        <b>Bastidores</b><br>
+        Olha só quem apareceu no camarim hoje...<br>
+        <button class="btn" type="button">❤️ Curtir</button>
+        <span class="likes">456</span>
+    </div>
+</div>
+</body>
+</html>
+"""
+
+# Salva o HTML em um arquivo
+with open("perfil_ana_castela.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+# Abre no navegador
+webbrowser.open("perfil_ana_castela.html")
